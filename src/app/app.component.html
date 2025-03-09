@@ -1,0 +1,39 @@
+<ion-app>
+
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menú</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+        <ion-item routerLink="/radio">
+          <img class="iconos-radio-80" src="./assets/iconos/walkman.png" alt="">
+          <ion-label>Radio Online</ion-label>
+        </ion-item>
+        <ion-item routerLink="/social">
+          <img class="iconos-radio-80" src="./assets/iconos/informe-de-noticias.png" alt="">
+          <ion-label>Efemerides</ion-label>
+        </ion-item>
+        <ion-item routerLink="#">
+          <img class="iconos-radio-80" src="./assets/iconos/configuracion-de-sincronizacion.png" alt="">
+          <ion-label>Configuración</ion-label>
+        </ion-item>
+      </ion-list>
+      <div class="texto-social">
+        <p>Siguenos en nuestras Redes Sociales</p>
+        <div class="contenedor-social">
+          <img class="logo-social" src="./assets/iconos/facebook.png" alt="" srcset="">
+          <img class="logo-social" src="./assets/iconos/instagram.png" alt="" srcset="">
+        </div>
+
+      </div>
+      
+
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main-content"></ion-router-outlet>
+</ion-app>

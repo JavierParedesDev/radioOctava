@@ -1,0 +1,7 @@
+{
+  "name": "Radio-octava",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,94 @@
+ion-title {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+ion-content {
+  --background: url("/assets/fondo2.jpg") center center / cover;
+}
+
+h1 {
+  color: #fff;
+  margin: 0;
+}
+p {
+  color: #fff;
+  font-size: 30px;
+  margin: 0;
+}
+
+.radio-container {
+  text-align: center;
+}
+
+.radio-logo {
+  width: 150px;
+  height: 150px;
+  margin: 20px auto;
+  border-radius: 50%;
+}
+
+.boton-play {
+  width: 150px;
+  height: 150px;
+  --border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animación cuando la radio está sonando */
+.sonando {
+  animation: pulseEffect 1.5s infinite ease-in-out;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  color: white;
+}
+
+/* Efecto de pulsación */
+@keyframes pulseEffect {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 64, 108, 0.6),
+      0 0 20px rgba(255, 75, 43, 0.6);
+    transform: scale(1);
+    border-radius: 50%;
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(255, 64, 108, 0.8),
+      0 0 50px rgba(255, 75, 43, 0.8);
+    transform: scale(1.01);
+    border-radius: 25%;
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 210, 64, 0.6),
+      0 0 20px rgba(255, 75, 43, 0.6);
+    transform: scale(1);
+    border-radius: 50%;
+  }
+}
+
+.icono-play {
+  font-size: 100px;
+}
+
+.image-gallery {
+  width: 100%;
+  height: 300px; /* Ajusta según el tamaño que quieras para la galería */
+  overflow: hidden; /* Para evitar que las imágenes se desborden */
+  position: relative;
+  padding: 30px;
+  
+}
+
+.image-slider {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 3s ease-in-out;
+  display: none; /* Oculta todas las imágenes por defecto */
+  border-radius: 20px;
+}
+
+.image-slider.active {
+  display: block; /* Solo la imagen activa será visible */
+}
+

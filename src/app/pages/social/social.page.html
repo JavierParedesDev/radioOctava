@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Efemerides del día</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-list>
+    <ion-item class="contenido" *ngFor="let publicaciones of publicaciones">
+      <ion-label>
+        <h3><img class="logo" src="./assets/logo.jpg" alt="">Octava Online</h3>
+        <img class="foto" src="{{ publicaciones.foto }}" alt="">
+        <ion-icon class="icono" name="heart-outline"></ion-icon>
+        <p>{{ publicaciones.texto }}</p>
+        <p class="fecha">{{ publicaciones.fecha_publicacion | date: 'medium' }}</p> 
+        <ion-input type="text" placeholder="Comenta"></ion-input>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

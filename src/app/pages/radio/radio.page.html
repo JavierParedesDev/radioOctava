@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Octava Online</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="radio-container">
+        <!-- Logo -->
+        <img src="assets/logo.jpg" alt="Radio Logo" class="radio-logo" />
+        <h1>Escucha en Vivo</h1>
+        <p>las 24 horas.</p>
+        <!-- Galería de imágenes que cambia -->
+        <div class="image-gallery">
+          <img *ngFor="let image of images; let i = index" [src]="image"
+              [ngClass]="{'image-slider': true, 'active': currentImageIndex === i}">
+        </div>
+          <ion-button class="boton-play" (click)="toggleRadio()" [color]="isPlaying ? 'danger' : 'success'"
+            [ngClass]="{ 'sonando': isPlaying }">
+            <ion-icon class="icono-play" [name]="isPlaying ? 'stop' : 'play'"></ion-icon>
+            {{ isPlaying ? '' : '' }}
+          </ion-button>
+        <div>
+
+          
+
+    </div>
+
+  </div>
+</ion-content>
